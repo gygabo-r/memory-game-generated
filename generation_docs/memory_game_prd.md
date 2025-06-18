@@ -6,9 +6,7 @@ A simple, responsive memory card game built with Vite and CSS, featuring UTF-8 e
 
 ## Technical Stack
 
-- **Build Tool**: Vite
 - **Styling**: CSS (vanilla)
-- **JavaScript**: Vanilla ES6+
 - **Icons**: UTF-8 Emoji characters
 - **Testing**: Custom automated test implementation
 
