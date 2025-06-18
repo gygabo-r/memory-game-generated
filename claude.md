@@ -1,0 +1,67 @@
+# Project Overview
+
+This is a React application built with Vite for fast development and optimized builds.
+
+## Tech Stack
+- **Framework**: React 18
+- **Build Tool**: Vite
+- **Language**: TypeScript
+- **Styling**: [CSS Modules/Tailwind/Styled Components/etc.]
+- **State Management**: [Redux/Zustand/Context API/etc.]
+- **Routing**: [React Router/etc.]
+
+## Project Structure
+```
+src/
+├── ComponentName/  # Each component has its own directory
+├── PageName.jsx    # Page components as files in src
+├── assets/         # Images, fonts, CSS files
+└── App.jsx         # Main app component
+```
+
+## Development Guidelines
+
+### Component Structure
+- Each component gets its own directory in src/ (e.g., `Button/`, `Header/`)
+- Use functional components with hooks and proper TypeScript types
+- Keep components focused on a single responsibility
+- Define clear interfaces for component props
+- Place component files, styles, and tests together in their directory
+
+### State Management
+- Use local state (useState) for component-specific data
+- Use context for data that needs to be shared across multiple components
+- [Add your specific state management approach here]
+
+### Styling
+- CSS files are stored in the assets/ directory
+- [Describe your styling approach and conventions]
+- Use consistent naming conventions for CSS classes
+
+## Available Scripts
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run linting
+
+## Code Style & Linting Rules
+- Use consistent indentation (2 spaces)
+- Use meaningful variable and function names with proper TypeScript types
+- Define interfaces for props and complex data structures
+- Add comments for complex logic
+- Follow React and TypeScript best practices
+- Leverage TypeScript's type checking for better code quality
+- Use ESLint with TypeScript support
+- Follow React recommended rules
+- Enforce consistent code formatting
+- Use Prettier for automatic code formatting
+- Run linting before commits to maintain code quality
+
+## Testing
+[Add testing approach and commands when implemented]
+
+## Notes for Claude Code
+- When making changes, prioritize maintaining existing patterns and conventions
+- Test changes in the browser after implementation
+- Consider performance implications for any new features
+- Maintain responsive design principles
