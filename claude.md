@@ -3,7 +3,7 @@
 This is a React application built with Vite for fast development and optimized builds.
 
 ## Tech Stack
-- **Framework**: React 18
+- **Framework**: React 19
 - **Build Tool**: Vite
 - **Language**: TypeScript
 - **Styling**: [CSS Modules/Tailwind/Styled Components/etc.]
