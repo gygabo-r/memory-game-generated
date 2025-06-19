@@ -27,6 +27,8 @@ src/
 - Keep components focused on a single responsibility
 - Define clear interfaces for component props
 - Place component files, styles, and tests together in their directory
+- **Each component must have its own CSS file** - avoid putting component styles in App.css
+- Import component CSS files directly in the component TSX file
 
 ### State Management
 - Use local state (useState) for component-specific data
@@ -36,9 +38,11 @@ src/
 - Use Sets for tracking flipped/matched cards instead of boolean properties in Card interface
 
 ### Styling
-- CSS files are stored in the assets/ directory
-- [Describe your styling approach and conventions]
+- Each component has its own CSS file in the component directory
+- App.css contains only global styles and app-level layout
+- Component CSS files are imported directly in the component TSX file
 - Use consistent naming conventions for CSS classes
+- Avoid component-specific styles in shared CSS files
 
 ## Available Scripts
 - `npm run dev` - Start development server

@@ -1,3 +1,5 @@
+import './VictoryModal.css';
+
 interface VictoryModalProps {
   isOpen: boolean;
   onPlayAgain: () => void;

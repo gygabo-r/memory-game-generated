@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import type {Card} from './types';
 import { createCards } from './shuffledCards';
 import type { GameSettings } from '../GameConfig';
+import './GameGrid.css';
 
 interface GameGridProps {
   onGameWon: () => void;

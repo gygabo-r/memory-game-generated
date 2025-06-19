@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import type { GameSize, GameTheme, GameConfigProps, GameSettings } from './types';
+import './GameConfig.css';
 import animalIcons from '../GameGrid/icons/animal_icons.json';
 import foodDrinksIcons from '../GameGrid/icons/food_drinks_icons.json';
 import fruitVegetableIcons from '../GameGrid/icons/fruit_vegetable_icons.json';
