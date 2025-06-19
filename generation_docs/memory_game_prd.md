@@ -129,7 +129,8 @@ An automated test suite that simulates gameplay using a systematic solving strat
 - [x] Add test mode functionality with 2x2 grid option (4 tiles) visible only when test: true is stored in game settings
 
 ### Phase 3: Testing Suite Development
-- [ ] Create automated test framework
+- [ ] Set up Vitest testing framework
+- [ ] Create automated test framework using Vitest
 - [ ] Implement systematic tile selection algorithm
 - [ ] Build memory tracking system for revealed tiles
 - [ ] Create game completion detection
