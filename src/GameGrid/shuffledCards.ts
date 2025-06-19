@@ -3,7 +3,6 @@ import animalIcons from './icons/animal_icons.json';
 import foodDrinksIcons from './icons/food_drinks_icons.json';
 import fruitVegetableIcons from './icons/fruit_vegetable_icons.json';
 import natureIcons from './icons/nature_icons.json';
-import objectIcons from './icons/object_icons.json';
 import travelIcons from './icons/travel_icons.json';
 
 // Combine all icon objects into a single array of emojis
@@ -12,7 +11,6 @@ const allIcons = [
   ...Object.values(foodDrinksIcons),
   ...Object.values(fruitVegetableIcons),
   ...Object.values(natureIcons),
-  ...Object.values(objectIcons),
   ...Object.values(travelIcons)
 ];
 
