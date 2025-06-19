@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import VictoryModal from './VictoryModal';
 
 interface Card {
   id: number;
@@ -102,15 +103,7 @@ function App() {
         ))}
       </div>
       
-      {gameWon && (
-        <div className="victory-modal">
-          <div className="modal-content">
-            <div className="party-emoji">🎉</div>
-            <h2>You Won!</h2>
-            <button onClick={resetGame}>Start New Game</button>
-          </div>
-        </div>
-      )}
+      <VictoryModal isOpen={gameWon} onStartNewGame={resetGame} />
     </div>
   );
 }

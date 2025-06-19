@@ -35,8 +35,8 @@ A simple, responsive memory card game built with Vite and CSS, featuring UTF-8 e
 5. Game completion triggers victory modal
 
 #### Victory Condition
-- Modal appears when all 8 pairs are successfully matched
-- Modal contains:
+- VictoryModal component appears when all 8 pairs are successfully matched
+- VictoryModal contains:
   - Large party popper emoji (🎉) as primary visual element
   - "You Won!" congratulatory text
   - "Start New Game" button to reset and play again
@@ -96,8 +96,9 @@ An automated test suite that simulates gameplay using a systematic solving strat
 - [ ] Design and implement tile visual states (face-down, face-up, matched)
 - [ ] Create smooth CSS animations for tile flipping
 - [ ] Implement click event handling and user interaction
-- [ ] Build victory modal component with party popper icon
-- [ ] Style modal with "You Won!" text and new game button
+- [ ] Build VictoryModal component in separate directory with specific content
+- [ ] Include party popper icon, "You Won!" text, and new game button in VictoryModal
+- [ ] Style VictoryModal with proper modal overlay and content styling
 
 ### Phase 4: Responsive Design Implementation
 - [ ] Implement flexible grid system that scales with viewport
