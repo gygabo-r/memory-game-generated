@@ -129,12 +129,9 @@ An automated test suite that simulates gameplay using a systematic solving strat
 - [x] Add test mode functionality with 2x2 grid option (4 tiles) visible only when test: true is stored in game settings
 
 ### Phase 3: Testing Suite Development
-- [ ] Set up Vitest testing framework
-- [ ] Create automated test framework using Vitest
-- [ ] Implement systematic tile selection algorithm
-- [ ] Build memory tracking system for revealed tiles
-- [ ] Create game completion detection
-- [ ] Implement automatic game reset and continuous testing
+- [x] Set up Vitest testing framework
+- [ ] Build an all cases test
+  - [x] Create test which at first tests the start page, entry point is App.tsx, display all the options except the test mode option
 - [ ] Add test result logging and validation
 
 ### Phase 4: Progressive Web App Implementation

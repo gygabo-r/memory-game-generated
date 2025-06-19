@@ -69,6 +69,14 @@ src/
 ## Testing
 [Add testing approach and commands when implemented]
 
+## Best Practices
+- **DRY (Don't Repeat Yourself)**: Eliminate code repetition by extracting common patterns into reusable functions, loops, or components
+- **Single Responsibility**: Each function, component, and test should have one clear purpose
+- **Meaningful Names**: Use descriptive names for variables, functions, and components that clearly express their intent
+- **Consistent Patterns**: Follow established patterns within the codebase for similar functionality
+- **Keep It Simple**: Prefer simple, readable solutions over complex ones unless complexity is justified
+- **Test Maintainability**: Write tests that are easy to understand and modify; refactor repetitive test code
+
 ## Notes for Claude Code
 - When making changes, prioritize maintaining existing patterns and conventions
 - Test changes in the browser after implementation
