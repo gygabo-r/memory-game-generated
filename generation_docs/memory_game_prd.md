@@ -113,7 +113,21 @@ An automated test suite that simulates gameplay using a systematic solving strat
 - [x] Ensure proper spacing and proportions across screen sizes
 - [x] Optimize performance for smooth animations on all devices
 
-### Phase 2: Testing Suite Development
+### Phase 2: Game Configuration Interface
+- [ ] Create game size selector with 16, 24, and 36 tile options
+- [ ] Design size selector buttons with proportional visual differences
+- [ ] Implement theme selector for animals, foods, fruits, nature, and travel categories
+- [ ] Design theme selector buttons with distinct selected state styling
+- [ ] Display representative icons from each theme's JSON file on theme buttons
+- [ ] Set default selections: 16 tiles and animals theme
+- [ ] Implement localStorage persistence for user selections
+- [ ] Create game configuration page/screen before game starts
+- [ ] Update VictoryModal to include two action buttons
+- [ ] Add "Play Again" button (primary style) to restart with same settings
+- [ ] Add "Start New" button (secondary style) to return to configuration screen
+- [ ] Implement navigation flow between configuration and game screens
+
+### Phase 3: Testing Suite Development
 - [ ] Create automated test framework
 - [ ] Implement systematic tile selection algorithm
 - [ ] Build memory tracking system for revealed tiles
@@ -121,14 +135,14 @@ An automated test suite that simulates gameplay using a systematic solving strat
 - [ ] Implement automatic game reset and continuous testing
 - [ ] Add test result logging and validation
 
-### Phase 3: Progressive Web App Implementation
+### Phase 4: Progressive Web App Implementation
 - [ ] Create web app manifest file
 - [ ] Implement service worker for offline functionality
 - [ ] Add installation prompt and app-like experience
 - [ ] Enable offline gameplay capability
 - [ ] Optimize for app-like performance and caching
 
-### Phase 4: Polish and Optimization
+### Phase 5: Polish and Optimization
 - [ ] Performance optimization for animations
 - [ ] Cross-browser compatibility testing
 - [ ] Accessibility improvements (keyboard navigation, screen readers)
