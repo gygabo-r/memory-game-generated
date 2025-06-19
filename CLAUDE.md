@@ -56,6 +56,7 @@ src/
 - Enforce consistent code formatting
 - Use Prettier for automatic code formatting
 - Run linting before commits to maintain code quality
+- **Semicolons**: Ensure ESLint config includes `'semi': ['error', 'always']` rule to enforce semicolons
 
 ## Testing
 [Add testing approach and commands when implemented]
