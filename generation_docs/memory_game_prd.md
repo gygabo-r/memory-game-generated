@@ -130,8 +130,17 @@ An automated test suite that simulates gameplay using a systematic solving strat
 
 ### Phase 3: Testing Suite Development
 - [x] Set up Vitest testing framework
-- [ ] Build an all cases test
+- [x] Build an all cases test
   - [x] Create test which at first tests the start page, entry point is App.tsx, display all the options except the test mode option
+- [x] Check game flow test
+  - [x] Create comprehensive game flow test that validates configuration to completion workflow
+  - [x] Test configuration selection: user selects size 16 and theme fruits, then can start the game
+  - [x] Implement systematic game solving test with specific algorithm:
+    - Click first hidden tile
+    - Check next hidden tile - if match, move to next 'first' hidden tile and repeat
+    - If no match, click first tile again to hide, then move to next hidden tile
+    - Continue systematic process until all pairs are found and game is won
+  - [x] Validate victory modal appears and new game functionality works correctly
 - [ ] Add test result logging and validation
 
 ### Phase 4: Progressive Web App Implementation
