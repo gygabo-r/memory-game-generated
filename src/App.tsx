@@ -2,10 +2,10 @@ import { useState } from 'react';
 import './App.css';
 
 interface Card {
-  id: number
-  emoji: string
-  isFlipped: boolean
-  isMatched: boolean
+  id: number;
+  emoji: string;
+  isFlipped: boolean;
+  isMatched: boolean;
 }
 
 const animalEmojis = ['🐶', '🐱', '🐭', '🐹', '🐰', '🦊', '🐻', '🐼'];
