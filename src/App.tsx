@@ -18,7 +18,6 @@ function App() {
 
   return (
     <div className="app">
-      <h1>Memory Game</h1>
       <GameGrid onGameWon={handleGameWon} resetTrigger={resetTrigger} />
       <VictoryModal isOpen={gameWon} onStartNewGame={resetGame} />
     </div>
