@@ -99,6 +99,8 @@ An automated test suite that simulates gameplay using a systematic solving strat
 - [x] Organize GameGrid directory with types.ts for interfaces and shuffledCards.ts for utilities
 - [x] Separate Card interface into types.ts file within GameGrid directory
 - [x] Extract shuffleArray and createCards functions into shuffledCards.ts utility file
+- [x] Use type imports for better TypeScript performance and clarity
+- [x] Implement centered app layout with gradient background
 - [x] Use HTML document title for game branding instead of in-page h1 element
 - [x] Build VictoryModal component in separate directory with specific content
 - [x] Include party popper icon, "You Won!" text, and new game button in VictoryModal

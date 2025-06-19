@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Card } from './types';
+import type {Card} from './types';
 import { createCards } from './shuffledCards';
 
 interface GameGridProps {
