@@ -126,6 +126,7 @@ An automated test suite that simulates gameplay using a systematic solving strat
 - [x] Add "Play Again" button (primary style) to restart with same settings
 - [x] Add "Game Options" button (secondary style in beige color) to return to configuration screen
 - [x] Implement navigation flow between configuration and game screens
+- [x] Add test mode functionality with 2x2 grid option (4 tiles) visible only when test: true is stored in game settings
 
 ### Phase 3: Testing Suite Development
 - [ ] Create automated test framework

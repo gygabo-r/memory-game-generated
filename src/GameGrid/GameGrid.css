@@ -5,6 +5,11 @@
   perspective: 1000px;
 }
 
+.grid-2x2 {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 240px;
+}
+
 .grid-4x4 {
   grid-template-columns: repeat(4, 1fr);
   max-width: 480px;

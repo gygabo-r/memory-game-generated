@@ -52,6 +52,7 @@ function GameGrid({ onGameWon, resetTrigger, settings }: GameGridProps) {
 
   const getGridClass = () => {
     const size = settings.size;
+    if (size === 4) return 'game-grid grid-2x2';
     if (size === 16) return 'game-grid grid-4x4';
     if (size === 24) return 'game-grid grid-6x4';
     if (size === 36) return 'game-grid grid-6x6';
