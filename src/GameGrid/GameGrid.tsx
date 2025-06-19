@@ -3,8 +3,6 @@ import { useState, useEffect } from 'react';
 interface Card {
   id: number;
   emoji: string;
-  isFlipped: boolean;
-  isMatched: boolean;
 }
 
 interface GameGridProps {
@@ -29,58 +27,45 @@ function createCards(): Card[] {
   
   return shuffledEmojis.map((emoji, index) => ({
     id: index,
-    emoji,
-    isFlipped: false,
-    isMatched: false
+    emoji
   }));
 }
 
 function GameGrid({ onGameWon, resetTrigger }: GameGridProps) {
   const [cards, setCards] = useState<Card[]>(createCards());
-  const [flippedCards, setFlippedCards] = useState<number[]>([]);
+  const [flippedCards, setFlippedCards] = useState<Set<number>>(new Set());
+  const [matchedCards, setMatchedCards] = useState<Set<number>>(new Set());
 
   useEffect(() => {
     setCards(createCards());
-    setFlippedCards([]);
+    setFlippedCards(new Set());
+    setMatchedCards(new Set());
   }, [resetTrigger]);
 
   const handleCardClick = (cardId: number) => {
-    if (flippedCards.length === 2) return;
-    if (flippedCards.includes(cardId)) return;
-    if (cards.find(card => card.id === cardId)?.isMatched) return;
+    if (flippedCards.size === 2) return;
+    if (flippedCards.has(cardId)) return;
+    if (matchedCards.has(cardId)) return;
 
-    const newFlippedCards = [...flippedCards, cardId];
+    const newFlippedCards = new Set([...flippedCards, cardId]);
     setFlippedCards(newFlippedCards);
 
-    setCards(prev => prev.map(card => 
-      card.id === cardId ? { ...card, isFlipped: true } : card
-    ));
-
-    if (newFlippedCards.length === 2) {
-      const [firstId, secondId] = newFlippedCards;
+    if (newFlippedCards.size === 2) {
+      const [firstId, secondId] = Array.from(newFlippedCards);
       const firstCard = cards.find(card => card.id === firstId);
       const secondCard = cards.find(card => card.id === secondId);
 
       if (firstCard?.emoji === secondCard?.emoji) {
-        setCards(prev => prev.map(card => 
-          newFlippedCards.includes(card.id) 
-            ? { ...card, isMatched: true }
-            : card
-        ));
-        setFlippedCards([]);
+        setMatchedCards(prev => new Set([...prev, firstId, secondId]));
+        setFlippedCards(new Set());
         
-        const allMatched = cards.filter(card => !newFlippedCards.includes(card.id)).every(card => card.isMatched);
-        if (allMatched) {
+        const newMatchedCount = matchedCards.size + 2;
+        if (newMatchedCount === cards.length) {
           onGameWon();
         }
       } else {
         setTimeout(() => {
-          setCards(prev => prev.map(card => 
-            newFlippedCards.includes(card.id) 
-              ? { ...card, isFlipped: false }
-              : card
-          ));
-          setFlippedCards([]);
+          setFlippedCards(new Set());
         }, 1000);
       }
     }
@@ -91,7 +76,7 @@ function GameGrid({ onGameWon, resetTrigger }: GameGridProps) {
       {cards.map(card => (
         <div 
           key={card.id}
-          className={`card ${card.isFlipped || card.isMatched ? 'flipped' : ''}`}
+          className={`card ${flippedCards.has(card.id) || matchedCards.has(card.id) ? 'flipped' : ''}`}
           onClick={() => handleCardClick(card.id)}
         >
           <div className="card-inner">

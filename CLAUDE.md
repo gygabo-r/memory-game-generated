@@ -22,7 +22,7 @@ src/
 ## Development Guidelines
 
 ### Component Structure
-- Each component gets its own directory in src/ (e.g., `Button/`, `Header/`)
+- Each component gets its own directory in src/ (e.g., `GameGrid/`, `VictoryModal/`)
 - Use functional components with hooks and proper TypeScript types
 - Keep components focused on a single responsibility
 - Define clear interfaces for component props
@@ -31,7 +31,9 @@ src/
 ### State Management
 - Use local state (useState) for component-specific data
 - Use context for data that needs to be shared across multiple components
-- [Add your specific state management approach here]
+- **Prefer Sets over object properties for tracking state collections**
+- Keep data interfaces minimal - avoid storing derived state in objects
+- Use Sets for tracking flipped/matched cards instead of boolean properties in Card interface
 
 ### Styling
 - CSS files are stored in the assets/ directory

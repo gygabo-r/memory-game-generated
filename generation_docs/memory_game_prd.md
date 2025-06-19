@@ -94,6 +94,8 @@ An automated test suite that simulates gameplay using a systematic solving strat
 - [x] Implement click event handling and user interaction
 - [x] Build GameGrid component in separate directory to handle all game logic
 - [x] Extract card state management, click handling, and match detection to GameGrid
+- [x] Use Sets for flippedCards and matchedCards state instead of storing state in Card interface
+- [x] Keep Card interface minimal with only id and emoji properties
 - [x] Build VictoryModal component in separate directory with specific content
 - [x] Include party popper icon, "You Won!" text, and new game button in VictoryModal
 - [x] Style VictoryModal with proper modal overlay and content styling
