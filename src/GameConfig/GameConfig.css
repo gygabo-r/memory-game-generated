@@ -100,7 +100,7 @@
 }
 
 .start-button {
-  background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(45deg, #4CAF50 0%, #45a049 100%);
   color: white;
   border: none;
   padding: 18px 40px;
@@ -114,5 +114,5 @@
 
 .start-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
 }

@@ -121,9 +121,9 @@ An automated test suite that simulates gameplay using a systematic solving strat
 - [x] Display representative icons from each theme's JSON file on theme buttons
 - [x] Set default selections: 16 tiles and animals theme
 - [x] Implement localStorage persistence for user selections
-- [x] Create game configuration page/screen before game starts
+- [x] Create game configuration page/screen before game starts with green "Start Game" button
 - [x] Update VictoryModal to include two action buttons
-- [x] Add "Play Again" button (primary style) to restart with same settings
+- [x] Add "Play Again" button (primary style in green color) to restart with same settings
 - [x] Add "Game Options" button (secondary style in beige color) to return to configuration screen
 - [x] Implement navigation flow between configuration and game screens
 - [x] Add test mode functionality with 2x2 grid option (4 tiles) visible only when test: true is stored in game settings
