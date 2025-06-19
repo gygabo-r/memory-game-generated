@@ -14,9 +14,9 @@ A simple, responsive memory card game built with Vite and CSS, featuring UTF-8 e
 
 ### Grid Layout
 - **Size**: 4x4 grid (16 tiles total)
-- **Pairs**: 8 unique pairs of matching icons
+- **Pairs**: 8 unique pairs of matching icons randomly selected from combined icon sets
 - **Responsive**: Grid adapts to fill available screen space
-- **Icons**: UTF-8 emoji characters for visual appeal
+- **Icons**: UTF-8 emoji characters sourced from multiple JSON files (animals, food, nature, objects, travel, fruits)
 
 ### Game Mechanics
 
@@ -99,6 +99,8 @@ An automated test suite that simulates gameplay using a systematic solving strat
 - [x] Organize GameGrid directory with types.ts for interfaces and shuffledCards.ts for utilities
 - [x] Separate Card interface into types.ts file within GameGrid directory
 - [x] Extract shuffleArray and createCards functions into shuffledCards.ts utility file
+- [x] Import and combine multiple JSON icon sets (animals, food, nature, objects, travel, fruits)
+- [x] Randomly select 8 unique icons from combined icon pool for each game session
 - [x] Use type imports for better TypeScript performance and clarity
 - [x] Implement centered app layout with gradient background
 - [x] Use HTML document title for game branding instead of in-page h1 element
