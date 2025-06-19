@@ -40,11 +40,24 @@ h1 {
 
 .game-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   gap: 15px;
-  max-width: 480px;
   margin: 0 auto;
   perspective: 1000px;
+}
+
+.grid-4x4 {
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 480px;
+}
+
+.grid-6x4 {
+  grid-template-columns: repeat(6, 1fr);
+  max-width: 600px;
+}
+
+.grid-6x6 {
+  grid-template-columns: repeat(6, 1fr);
+  max-width: 600px;
 }
 
 .card {
@@ -154,7 +167,14 @@ h1 {
   margin-bottom: 2rem;
 }
 
-.modal-content button {
+.modal-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.play-again-button {
   background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
   color: white;
   border: none;
@@ -166,7 +186,20 @@ h1 {
   font-weight: bold;
 }
 
-.modal-content button:hover {
+.start-new-button {
+  background: linear-gradient(45deg, #a8a8a8 0%, #909090 100%);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-weight: bold;
+}
+
+.play-again-button:hover,
+.start-new-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
@@ -222,4 +255,124 @@ h1 {
   .card-front::before {
     font-size: 2rem;
   }
+}
+
+/* Game Configuration Styles */
+.game-config {
+  text-align: center;
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+  color: white;
+}
+
+.game-config h1 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.config-section {
+  margin-bottom: 3rem;
+}
+
+.config-section h2 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.size-selector {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.size-button {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  min-width: 60px;
+}
+
+.size-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.size-button.selected {
+  background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%);
+  border-color: #ffffff;
+  box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+}
+
+.theme-selector {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.theme-button {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 15px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 80px;
+}
+
+.theme-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.theme-button.selected {
+  background: linear-gradient(45deg, #fa709a 0%, #fee140 100%);
+  border-color: #ffffff;
+  box-shadow: 0 4px 15px rgba(250, 112, 154, 0.4);
+}
+
+.theme-icon {
+  font-size: 2rem;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.theme-name {
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.start-button {
+  background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 18px 40px;
+  font-size: 1.3rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+.start-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
 }

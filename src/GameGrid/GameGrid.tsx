@@ -1,22 +1,24 @@
 import { useState, useEffect } from 'react';
 import type {Card} from './types';
 import { createCards } from './shuffledCards';
+import type { GameSettings } from '../GameConfig';
 
 interface GameGridProps {
   onGameWon: () => void;
   resetTrigger: number;
+  settings: GameSettings;
 }
 
-function GameGrid({ onGameWon, resetTrigger }: GameGridProps) {
-  const [cards, setCards] = useState<Card[]>(createCards());
+function GameGrid({ onGameWon, resetTrigger, settings }: GameGridProps) {
+  const [cards, setCards] = useState<Card[]>(createCards(settings));
   const [flippedCards, setFlippedCards] = useState<Set<number>>(new Set());
   const [matchedCards, setMatchedCards] = useState<Set<number>>(new Set());
 
   useEffect(() => {
-    setCards(createCards());
+    setCards(createCards(settings));
     setFlippedCards(new Set());
     setMatchedCards(new Set());
-  }, [resetTrigger]);
+  }, [resetTrigger, settings]);
 
   const handleCardClick = (cardId: number) => {
     if (flippedCards.size === 2) return;
@@ -47,8 +49,16 @@ function GameGrid({ onGameWon, resetTrigger }: GameGridProps) {
     }
   };
 
+  const getGridClass = () => {
+    const size = settings.size;
+    if (size === 16) return 'game-grid grid-4x4';
+    if (size === 24) return 'game-grid grid-6x4';
+    if (size === 36) return 'game-grid grid-6x6';
+    return 'game-grid grid-4x4';
+  };
+
   return (
-    <div className="game-grid">
+    <div className={getGridClass()}>
       {cards.map(card => (
         <div 
           key={card.id}

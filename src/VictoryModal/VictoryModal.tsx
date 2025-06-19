@@ -1,9 +1,10 @@
 interface VictoryModalProps {
   isOpen: boolean;
-  onStartNewGame: () => void;
+  onPlayAgain: () => void;
+  onStartNew: () => void;
 }
 
-function VictoryModal({ isOpen, onStartNewGame }: VictoryModalProps) {
+function VictoryModal({ isOpen, onPlayAgain, onStartNew }: VictoryModalProps) {
   if (!isOpen) return null;
 
   return (
@@ -11,7 +12,14 @@ function VictoryModal({ isOpen, onStartNewGame }: VictoryModalProps) {
       <div className="modal-content">
         <div className="party-emoji">🎉</div>
         <h2>You Won!</h2>
-        <button onClick={onStartNewGame}>Start New Game</button>
+        <div className="modal-buttons">
+          <button className="play-again-button" onClick={onPlayAgain}>
+            Play Again
+          </button>
+          <button className="start-new-button" onClick={onStartNew}>
+            Start New
+          </button>
+        </div>
       </div>
     </div>
   );
