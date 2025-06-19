@@ -124,7 +124,7 @@ An automated test suite that simulates gameplay using a systematic solving strat
 - [x] Create game configuration page/screen before game starts
 - [x] Update VictoryModal to include two action buttons
 - [x] Add "Play Again" button (primary style) to restart with same settings
-- [x] Add "Start New" button (secondary style) to return to configuration screen
+- [x] Add "Game Options" button (secondary style in beige color) to return to configuration screen
 - [x] Implement navigation flow between configuration and game screens
 
 ### Phase 3: Testing Suite Development

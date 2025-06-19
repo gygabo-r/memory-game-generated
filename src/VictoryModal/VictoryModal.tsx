@@ -19,7 +19,7 @@ function VictoryModal({ isOpen, onPlayAgain, onStartNew }: VictoryModalProps) {
             Play Again
           </button>
           <button className="start-new-button" onClick={onStartNew}>
-            Start New
+            Game Options
           </button>
         </div>
       </div>
