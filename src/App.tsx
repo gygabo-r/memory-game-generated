@@ -3,6 +3,7 @@ import './App.css';
 import VictoryModal from './VictoryModal';
 import GameGrid from './GameGrid';
 import GameConfig, { type GameSettings } from './GameConfig';
+import InstallPrompt from './InstallPrompt/InstallPrompt';
 
 type GameState = 'config' | 'playing';
 
@@ -36,6 +37,7 @@ function App() {
     return (
       <div className="app">
         <GameConfig onStartGame={handleStartGame} />
+        <InstallPrompt />
       </div>
     );
   }
@@ -52,6 +54,7 @@ function App() {
         onPlayAgain={handlePlayAgain}
         onStartNew={handleStartNew}
       />
+      <InstallPrompt />
     </div>
   );
 }

@@ -56,7 +56,7 @@ function GameConfig({ onStartGame }: GameConfigProps) {
       <div className="config-section">
         <h2>Grid Size</h2>
         <div className="size-selector">
-          {(isTestMode ? [4, 16, 24, 36] : [16, 24, 36] as GameSize[]).map(size => (
+          {(isTestMode ? [4, 16, 24, 36] as GameSize[] : [16, 24, 36] as GameSize[]).map(size => (
             <button
               key={size}
               className={`size-button ${settings.size === size ? 'selected' : ''}`}
