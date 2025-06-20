@@ -13,11 +13,11 @@ describe('App Start Page', () => {
       
       // Check that normal size options are present
       expectedSizes.forEach(size => {
-        expect(screen.getByRole('button', { name: String(size) })).toBeInTheDocument();
+        expect(screen.getByText(String(size))).toBeInTheDocument();
       });
       
       // Check that test mode size is not present
-      expect(screen.queryByRole('button', { name: String(testModeSize) })).not.toBeInTheDocument();
+      expect(screen.queryByText(String(testModeSize))).not.toBeInTheDocument();
     });
   });
 
@@ -28,9 +28,9 @@ describe('App Start Page', () => {
       const themes = ['animals', 'foods', 'fruits', 'nature', 'travel'];
       
       themes.forEach(theme => {
-        const button = screen.getByRole('button', { name: new RegExp(theme, 'i') });
-        expect(button.querySelector('.theme-icon')).toBeInTheDocument();
-        expect(button.querySelector('.theme-name')).toBeInTheDocument();
+        const button = screen.getByRole('radio', { name: new RegExp(`${theme} theme`, 'i') });
+        expect(button.querySelector('.theme-icon')).toBeTruthy();
+        expect(button.querySelector('.theme-name')).toBeTruthy();
       });
     });
   });
@@ -92,9 +92,9 @@ async function findMatch(firstIndex: number, tiles: Element[], firstTile: Elemen
 
 async function startTheGame() {
   await act(async () => {
-    fireEvent.click(screen.getByRole('button', {name: '16'}));
-    fireEvent.click(screen.getByRole('button', {name: /fruits/i}));
-    fireEvent.click(screen.getByRole('button', {name: /start game/i}));
+    fireEvent.click(screen.getByText('16'));
+    fireEvent.click(screen.getByRole('radio', {name: 'Fruits theme'}));
+    fireEvent.click(screen.getByRole('button', {name: /start memory game/i}));
   });
 
   await waitFor(() => {
