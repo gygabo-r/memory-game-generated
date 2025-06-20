@@ -116,3 +116,96 @@
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
 }
+
+/* Mobile responsive design */
+@media (max-width: 600px) {
+  .game-config {
+    padding: 15px;
+  }
+  
+  .game-config h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .config-section {
+    margin-bottom: 2rem;
+  }
+  
+  .config-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .size-selector {
+    gap: 10px;
+  }
+  
+  .size-button {
+    padding: 10px 18px;
+    font-size: 1rem;
+    min-width: 50px;
+  }
+  
+  .theme-selector {
+    gap: 10px;
+  }
+  
+  .theme-button {
+    padding: 12px 15px;
+    min-width: 70px;
+  }
+  
+  .theme-icon {
+    font-size: 1.5rem;
+  }
+  
+  .theme-name {
+    font-size: 0.8rem;
+  }
+  
+  .start-button {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .game-config h1 {
+    font-size: 1.8rem;
+  }
+  
+  .size-button {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+  
+  .theme-button {
+    padding: 10px 12px;
+    min-width: 60px;
+  }
+  
+  .theme-icon {
+    font-size: 1.3rem;
+  }
+  
+  .start-button {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+}
+
+/* Focus styles for accessibility */
+.size-button:focus,
+.theme-button:focus,
+.start-button:focus {
+  outline: 3px solid #ffeb3b;
+  outline-offset: 2px;
+}
+
+.size-button:focus:not(:focus-visible),
+.theme-button:focus:not(:focus-visible),
+.start-button:focus:not(:focus-visible) {
+  outline: none;
+}

@@ -54,13 +54,20 @@ function GameConfig({ onStartGame }: GameConfigProps) {
       <h1>Memory Game</h1>
       
       <div className="config-section">
-        <h2>Grid Size</h2>
-        <div className="size-selector">
+        <h2 id="size-heading">Grid Size</h2>
+        <div 
+          className="size-selector"
+          role="radiogroup"
+          aria-labelledby="size-heading"
+        >
           {(isTestMode ? [4, 16, 24, 36] as GameSize[] : [16, 24, 36] as GameSize[]).map(size => (
             <button
               key={size}
               className={`size-button ${settings.size === size ? 'selected' : ''}`}
               onClick={() => updateSettings({ size })}
+              role="radio"
+              aria-checked={settings.size === size}
+              aria-label={`${size} tiles grid`}
             >
               {size}
             </button>
@@ -69,22 +76,33 @@ function GameConfig({ onStartGame }: GameConfigProps) {
       </div>
 
       <div className="config-section">
-        <h2>Theme</h2>
-        <div className="theme-selector">
+        <h2 id="theme-heading">Theme</h2>
+        <div 
+          className="theme-selector"
+          role="radiogroup"
+          aria-labelledby="theme-heading"
+        >
           {(['animals', 'foods', 'fruits', 'nature', 'travel'] as GameTheme[]).map(theme => (
             <button
               key={theme}
               className={`theme-button ${settings.theme === theme ? 'selected' : ''}`}
               onClick={() => updateSettings({ theme })}
+              role="radio"
+              aria-checked={settings.theme === theme}
+              aria-label={`${theme.charAt(0).toUpperCase() + theme.slice(1)} theme`}
             >
-              <span className="theme-icon">{themeIcons[theme]}</span>
+              <span className="theme-icon" aria-hidden="true">{themeIcons[theme]}</span>
               <span className="theme-name">{theme.charAt(0).toUpperCase() + theme.slice(1)}</span>
             </button>
           ))}
         </div>
       </div>
 
-      <button className="start-button" onClick={handleStartGame}>
+      <button 
+        className="start-button" 
+        onClick={handleStartGame}
+        aria-label={`Start memory game with ${settings.size} tiles and ${settings.theme} theme`}
+      >
         Start Game
       </button>
     </div>

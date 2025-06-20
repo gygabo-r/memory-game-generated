@@ -30,11 +30,25 @@
   position: relative;
   cursor: pointer;
   border-radius: 12px;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
 }
 
 .card:hover {
   transform: scale(1.05);
+}
+
+.card:active {
+  transform: scale(0.98);
+}
+
+.card:focus {
+  outline: 3px solid #ffeb3b;
+  outline-offset: 2px;
+}
+
+.card:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .card-inner {
@@ -42,9 +56,10 @@
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.6s;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   transform-style: preserve-3d;
   border-radius: 12px;
+  will-change: transform;
 }
 
 .card.flipped .card-inner {
@@ -63,6 +78,7 @@
   justify-content: center;
   font-size: 2.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  contain: layout style paint;
 }
 
 .card-front {
@@ -114,5 +130,51 @@
   
   .card-front::before {
     font-size: 2rem;
+  }
+}
+
+/* Performance optimizations for low-end devices */
+.low-performance .card {
+  transition: none;
+}
+
+.low-performance .card-inner {
+  transition: transform 0.3s ease;
+}
+
+.low-performance .card:hover {
+  transform: none;
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+  
+  .card:hover {
+    transform: none;
+  }
+  
+  .card-inner {
+    transition: transform 0.3s ease;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .card-front {
+    background: #000;
+    border: 3px solid #fff;
+  }
+  
+  .card-back {
+    background: #fff;
+    border: 3px solid #000;
+    color: #000;
+  }
+  
+  .card-front::before {
+    color: #fff;
   }
 }

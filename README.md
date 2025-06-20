@@ -1,54 +1,103 @@
-# React + TypeScript + Vite
+# Memory Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive, accessible memory card matching game built as a Progressive Web App (PWA) with React and TypeScript.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🎮 **Multiple Game Modes**: 4x4, 6x4, and 6x6 grid sizes
+- 🎨 **Theme Selection**: Animals, foods, fruits, nature, and travel themes
+- 📱 **Progressive Web App**: Installable, works offline
+- ♿ **Fully Accessible**: Keyboard navigation, screen reader support
+- 🎯 **Responsive Design**: Works on all device sizes
+- ⚡ **Optimized Performance**: Smooth animations, low-end device support
+- 🧪 **Comprehensive Testing**: Automated test suite with Vitest
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Framework**: React 19 with TypeScript
+- **Build Tool**: Vite
+- **Testing**: Vitest with React Testing Library
+- **Styling**: CSS Modules with responsive design
+- **PWA**: Service Worker, Web App Manifest
+- **Accessibility**: ARIA labels, keyboard navigation
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Available Scripts
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm test` - Run test suite
+- `npm run lint` - Run linting
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+## Game Rules
+
+1. Click cards to flip them over
+2. Match pairs of identical emojis
+3. Game ends when all pairs are matched
+4. Try to complete with as few clicks as possible!
+
+## Accessibility Features
+
+- **Keyboard Navigation**: Use Tab, Enter, and Space keys
+- **Screen Reader Support**: Complete ARIA labels and descriptions
+- **High Contrast Mode**: Automatic adaptation
+- **Reduced Motion**: Respects user preferences
+- **Focus Management**: Clear visual focus indicators
+
+## PWA Features
+
+- **Offline Play**: Game works without internet connection
+- **Installation**: Add to home screen on mobile/desktop
+- **Background Sync**: Automatic updates when online
+- **App-like Experience**: Full-screen, no browser UI
+
+## Browser Support
+
+- Chrome 90+
+- Firefox 88+
+- Safari 14+
+- Edge 90+
+
+## Development
+
+### Project Structure
+
 ```
+src/
+├── GameGrid/          # Main game component
+├── GameConfig/        # Game configuration screen
+├── VictoryModal/      # Win celebration modal
+├── InstallPrompt/     # PWA installation prompt
+└── test/              # Test files
+```
+
+### Testing
+
+Run automated tests: `npm test`
+
+Includes:
+- Unit tests for components
+- Integration tests for game flow
+- Accessibility validation
+- Performance testing
+
+## License
+
+MIT License
