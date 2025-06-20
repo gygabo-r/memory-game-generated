@@ -98,6 +98,35 @@ Includes:
 - Accessibility validation
 - Performance testing
 
+## Deployment
+
+### Automatic Deployment
+
+The project includes a GitHub Actions workflow that automatically:
+
+1. **Builds** the application
+2. **Tests** all functionality
+3. **Deploys** to GitHub Pages (on push to main branch)
+
+The workflow runs on every push and pull request to ensure code quality.
+
+### Manual Deployment
+
+To deploy manually:
+
+```bash
+npm run build
+# Deploy dist/ folder to any static hosting service
+```
+
+### GitHub Pages Setup
+
+1. Go to repository Settings → Pages
+2. Set Source to "GitHub Actions"
+3. Push to main branch to trigger deployment
+
+The app will be available at: `https://[username].github.io/memory-game-generated/`
+
 ## License
 
 MIT License

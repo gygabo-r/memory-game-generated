@@ -2,20 +2,22 @@ const CACHE_NAME = 'memory-game-v1';
 const STATIC_CACHE = 'memory-game-static-v1';
 const RUNTIME_CACHE = 'memory-game-runtime-v1';
 
+// Get base path for GitHub Pages deployment
+const BASE_PATH = self.location.pathname.includes('/memory-game-generated/') ? '/memory-game-generated' : '';
+
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/manifest.json',
-  '/cropped_fav_icon.png',
-  '/icon-192.png',
-  '/icon-512.png'
+  BASE_PATH + '/',
+  BASE_PATH + '/index.html',
+  BASE_PATH + '/manifest.json',
+  BASE_PATH + '/icon-192.png',
+  BASE_PATH + '/icon-512.png'
 ];
 
 // Critical resources for immediate caching
 const CRITICAL_RESOURCES = [
-  '/index.html',
-  '/',
-  '/manifest.json'
+  BASE_PATH + '/index.html',
+  BASE_PATH + '/',
+  BASE_PATH + '/manifest.json'
 ];
 
 // Install event - cache resources
