@@ -95,7 +95,7 @@ self.addEventListener('fetch', (event) => {
             }
 
             const responseToCache = response.clone();
-            const cacheName = event.request.url.includes('icon') ? GAME_DATA_CACHE : CACHE_NAME;
+            const cacheName = event.request.url.includes('icon') ? STATIC_CACHE : CACHE_NAME;
 
             caches.open(cacheName)
               .then((cache) => {
