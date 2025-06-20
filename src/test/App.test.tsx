@@ -62,11 +62,6 @@ describe('Game Flow Test', () => {
   }, 600000);
 });
 
-function getEmoji(element: Element){
-  // @ts-expect-error it would be a lot of casting for no result
-  return element.firstChild?.lastChild?.innerHTML;
-}
-
 async function clickTile(firstTile: Element, timeOut: number = 200) {
   await act(async () => {
     fireEvent.click(firstTile);
@@ -81,7 +76,6 @@ async function findMatch(firstIndex: number, tiles: Element[], firstTile: Elemen
     if (secondTile.classList.contains('flipped')) continue;
     await clickTile(secondTile, 1200);
 
-    console.log(`Evaluating: ${getEmoji(firstTile)} and ${getEmoji(secondTile)}`);
     if (firstTile.classList.contains('flipped') && secondTile.classList.contains('flipped')) {
       return matchedCount += 2;
     }
