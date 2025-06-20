@@ -3,7 +3,7 @@ import './InstallPrompt.css';
 
 interface BeforeInstallPromptEvent extends Event {
   prompt(): Promise<void>;
-  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
+  userChoice: Promise<{ outcome: 'accepted' | 'dismissed'; }>;
 }
 
 function InstallPrompt() {

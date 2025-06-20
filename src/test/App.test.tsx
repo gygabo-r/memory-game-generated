@@ -63,7 +63,7 @@ describe('Game Flow Test', () => {
 });
 
 function getEmoji(element: Element){
-  // @ts-ignore
+  // @ts-expect-error it would be a lot of casting for no result
   return element.firstChild?.lastChild?.innerHTML;
 }
 
