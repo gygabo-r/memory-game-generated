@@ -143,27 +143,28 @@ An automated test suite that simulates gameplay using a systematic solving strat
   - [x] Validate victory modal appears and new game functionality works correctly
 - [x] Add test result logging and validation
 
-### Phase 4: Progressive Web App Implementation
-- [x] Create web app manifest file
-- [x] Implement service worker for offline functionality
-- [x] Add installation prompt and app-like experience
-- [x] Enable offline gameplay capability
-- [x] Optimize for app-like performance and caching
 
-### Phase 5: Polish and Optimization
+### Phase 4: Polish and Optimization
 - [x] Performance optimization for animations
 - [x] Cross-browser compatibility testing
 - [x] Accessibility improvements (keyboard navigation, screen readers)
 - [x] Code cleanup and documentation
 - [x] Final responsive design testing
 
-### Phase 6: CI/CD and Deployment
+### Phase 5: CI/CD and Deployment
 - [x] Create GitHub Actions workflow for automated testing and deployment
 - [x] Configure automated build process on push to main branch
 - [x] Set up automated test execution with failure prevention
 - [x] Implement GitHub Pages deployment pipeline
 - [x] Configure Vite for GitHub Pages base path
 - [x] Add deployment status badges and documentation
+
+### Phase 6: Progressive Web App Implementation (Minimal Changes)
+- [ ] Create basic web app manifest file with minimal required properties
+- [ ] Add manifest link to existing index.html
+- [ ] Add basic PWA meta tags to index.html (theme-color, apple-mobile-web-app-capable)
+- [ ] Test PWA installation prompt on supported browsers
+- [ ] Verify installable app experience works correctly
 
 ## Success Criteria
 
@@ -187,12 +188,13 @@ An automated test suite that simulates gameplay using a systematic solving strat
 - [ ] All game mechanics function correctly under automated testing
 - [ ] Performance remains stable during extended automated testing
 
-### Progressive Web App Requirements
-- [ ] Web app manifest with proper metadata
-- [ ] Service worker implementation for offline functionality
-- [ ] Installation prompt for app-like experience
-- [ ] Offline gameplay capability
-- [ ] Proper caching strategy for assets and game state
+### Progressive Web App Requirements (Phase 6)
+- [ ] Basic web app manifest with minimal required metadata
+- [ ] PWA installation prompt appears on supported browsers
+- [ ] App can be installed to home screen and launched standalone
+- [ ] No service worker needed - relies on browser caching
+- [ ] No complex PWA features or custom install prompts - browser-native only
+
 
 ## Future Enhancements (Out of Scope)
 - Difficulty levels with different grid sizes
