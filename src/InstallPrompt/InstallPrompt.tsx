@@ -16,11 +16,11 @@ function InstallPrompt() {
   useEffect(() => {
     // Check device type
     const checkDevice = () => {
-      const isIOSDevice = /iPad|iPhone|iPod/.test(navigator.userAgent) && !(window as any).MSStream;
+      const isIOSDevice = /iPad|iPhone|iPod/.test(navigator.userAgent) && !('MSStream' in window);
       setIsIOS(isIOSDevice);
       
       const standalone = window.matchMedia('(display-mode: standalone)').matches ||
-        (window.navigator as any).standalone ||
+        ('standalone' in window.navigator && (window.navigator as { standalone?: boolean; }).standalone) ||
         document.referrer.includes('android-app://');
       setIsStandalone(standalone);
       console.log('PWA Debug - iOS:', isIOSDevice, 'Standalone:', standalone);
